@@ -4,6 +4,7 @@
 @import "./base/reset";
 
 @import "./components/container";
+@import "./components/modal";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -12,4 +13,5 @@
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/footer";
-
+@import "./layout/filters";
+@import "./layout/grid";
