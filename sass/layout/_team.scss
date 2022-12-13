@@ -16,6 +16,7 @@
 
 .card-list {
     display: flex;
+    @extend %list;
 }
 
 .card-list__item:not(:last-child) {
@@ -64,6 +65,7 @@
     width: 44px;
     height: 44px;
     margin-right: 10px;
+    @extend %list;
 }
 
 .socials__item:last-child {
@@ -79,6 +81,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 250ms var(--timing-function);
+    @extend %link;
 }
 
 .socials__icon {

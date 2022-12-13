@@ -17,10 +17,15 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+    @extend %link;
 }
 
 .footer-address {
     font-style: normal;
+}
+
+.footer-address__list {
+    @extend %list;
 }
 
 .footer-address__list li:not(:last-child) {
@@ -32,6 +37,7 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--third-text-color);
+    @extend %link;
 }
 
 .footer-address__mail,
@@ -41,6 +47,7 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms var(--timing-function);
+    @extend %link;
 }
 
 .footer-address__mail:hover,
@@ -69,6 +76,7 @@
 
 .footer-soc__list {
     display: flex;
+    @extend %list;
 }
 
 .footer-soc__item {
@@ -90,6 +98,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 250ms var(--timing-function);
+    @extend %link;
 }
 
 .footer-soc__link:hover,

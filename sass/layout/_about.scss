@@ -5,6 +5,7 @@
 
 .about__list {
     display: flex;
+    @extend %list;
 }
 
 .about__title {

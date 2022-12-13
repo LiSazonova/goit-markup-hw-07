@@ -1,6 +1,6 @@
 .header {
     margin-bottom: 0;
-    border-bottom: 1px solid #ECECEC
+    border-bottom: 1px solid #ECECEC;
 }
 
 .header__container {
@@ -10,6 +10,7 @@
 
 .nav__list {
     display: flex;
+    @extend %list;
 }
 
 .logo {
@@ -18,6 +19,7 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    @extend %link;
 }
 
 .logo--light {
@@ -52,6 +54,8 @@
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms var(--timing-function);
+    
+    @extend %link;
 }
 
 .nav__link:hover,
@@ -76,6 +80,7 @@
 
 .connect__list {
     display: flex;
+    @extend %list;
 }
 
 .connect__mail,
@@ -90,6 +95,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms var(--timing-function);
+    @extend %link;
 }
 
 .connect__mail:hover,
