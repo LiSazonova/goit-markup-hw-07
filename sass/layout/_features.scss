@@ -1,11 +1,28 @@
 .features {
     padding-top: 94px;
     padding-bottom: 47px;
-}
 
-.features__list {
-    display: flex;
-    @extend %list;
+    &__list {
+        display: flex;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--first-text-color);
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--second-text-color);
+        max-width: 270px;
+    }
 }
 
 .icon-antenna::before {
@@ -37,22 +54,4 @@
 
 .features__item:not(:last-child) {
     margin-right: 30px;
-}
-
-.features__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--first-text-color);
-    margin-bottom: 10px;
-}
-
-.features__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--second-text-color);
-    max-width: 270px;
 }

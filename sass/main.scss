@@ -2,6 +2,7 @@
 @import "./utils/visually-hidden";
 @import "./utils/placeholders";
 @import "./base/reset";
+@import "./base/common";
 
 @import "./components/container";
 @import "./components/modal";
@@ -13,5 +14,4 @@
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/footer";
-@import "./layout/filters";
-@import "./layout/grid";
+@import "./layout/portfolio";

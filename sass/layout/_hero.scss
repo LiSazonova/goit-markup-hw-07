@@ -14,17 +14,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
-.hero__title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--third-text-color);
-    margin-bottom: 30px;
+    &__title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--third-text-color);
+        margin-bottom: 30px;
+    }
 }
 
 .hero__btn {
@@ -44,10 +44,10 @@
     border: none;
     transition: color 250ms var(--timing-function),
         background-color 250ms var(--timing-function);
-}
 
-.hero__btn:hover,
-.hero__btn:focus {
-    color: var(--third-text-color);
-    background-color: var(--second-accent-color);
+    &:hover,
+    &:focus {
+        color: var(--third-text-color);
+        background-color: var(--second-accent-color);
+    }
 }

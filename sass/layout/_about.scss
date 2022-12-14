@@ -1,29 +1,28 @@
 .about {
     padding-top: 47px;
     padding-bottom: 94px;
-}
 
-.about__list {
-    display: flex;
-    @extend %list;
-}
+    &__list {
+        display: flex;
+    }
 
-.about__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--first-text-color);
-    margin-bottom: 50px;
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--first-text-color);
+        margin-bottom: 50px;
+    }
 }
 
 .about__item {
     position: relative;
-}
 
-.about__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .about__top-text {
@@ -32,9 +31,8 @@
     bottom: 0;
     width: 100%;
     height: 70px;
-    display: flex;
+    @extend %align-list;
     justify-content: center;
-    align-items: center;
     background-color: rgba(47, 48, 58, 0.8);
     font-weight: 700;
     font-size: 14px;

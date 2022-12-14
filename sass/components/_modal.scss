@@ -7,12 +7,14 @@
     height: 100%;
     opacity: 1;
     transition: opacity 250ms var(--timing-function);
+
+    &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
+
 
 .modal {
     position: absolute;
@@ -28,10 +30,10 @@
     background: var(--first-background-color);
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 4px;
-}
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
+    .backdrop.is-hidden &.modal {
+            transform: translate(-50%, -50%) scale(0);
+        }
 }
 
 .modal-close-btn {
@@ -40,8 +42,7 @@
     right: 8px;
     width: 30px;
     height: 30px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     background: var(--first-background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -49,11 +50,11 @@
     cursor: pointer;
     fill: #000000;
     transition: fill 250ms var(--timing-function);
-}
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    fill: var(--first-accent-color);
+    &:hover,
+    &:focus {
+        fill: var(--first-accent-color);
+    }
 }
 
 .modal-title {
@@ -86,25 +87,24 @@
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    ;
-}
 
-.modal-input:hover,
-.modal-input:focus {
-    border-color: var(--first-accent-color);
-}
+    &:hover,
+    &:focus {
+        border-color: var(--first-accent-color);
+    }
 
-.modal-input:focus+.modal-form-icon {
-    fill: var(--first-accent-color);
+        &:focus+.modal-form-icon {
+            fill: var(--first-accent-color);
+        }
 }
 
 .input-wrap {
     position: relative;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.input-wrap:hover {
-    fill: var(--first-accent-color);
+    &:hover {
+            fill: var(--first-accent-color);
+        }
 }
 
 .modal-form-icon {
@@ -128,39 +128,38 @@
     color: rgba(117, 117, 117, 0.5);
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-comment::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 
-.modal-comment:hover,
-.modal-comment:focus {
-    border-color: var(--first-accent-color);
+    &:hover,
+    &:focus {
+        border-color: var(--first-accent-color);
+    }
 }
 
 .check-text {
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: space-evenly;
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
     line-height: 1.71;
     color: var(--second-text-color);
-}
 
-.check-text::before {
-    content: "";
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--logo-color);
-    border-radius: 3px;
-    margin-right: 7px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &::before {
+        content: "";
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--first-text-color);
+        border-radius: 3px;
+        margin-right: 7px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .modal-check:checked+.check-text::before {
@@ -180,9 +179,8 @@
 }
 
 .button-form {
-    display: flex;
+    @extend %align-list;
     justify-content: center;
-    align-items: center;
     width: 200px;
     height: 50px;
     padding: 0;
@@ -200,10 +198,10 @@
     background: var(--first-accent-color);
     border-radius: 4px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.button-form:hover,
-.button-form:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: var(--second-accent-color);
+    &:hover,
+    &:focus {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            background-color: var(--second-accent-color);
+        }
 }

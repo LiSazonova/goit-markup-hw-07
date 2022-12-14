@@ -17,15 +17,10 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
-    @extend %link;
 }
 
 .footer-address {
     font-style: normal;
-}
-
-.footer-address__list {
-    @extend %list;
 }
 
 .footer-address__list li:not(:last-child) {
@@ -37,7 +32,6 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--third-text-color);
-    @extend %link;
 }
 
 .footer-address__mail,
@@ -47,46 +41,39 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms var(--timing-function);
-    @extend %link;
-}
 
-.footer-address__mail:hover,
-.footer-address__tel:hover {
-    color: var(--first-accent-color);
-}
-
-.footer-address__mail:focus,
-.footer-address__tel:focus {
-    color: var(--first-accent-color);
+    &:hover,
+    &:focus {
+        color: var(--first-accent-color);
+    }
 }
 
 .footer-soc {
     margin-left: 70px;
-}
 
-.footer-soc__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--third-text-color);
-}
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--third-text-color);
+    }
 
-.footer-soc__list {
-    display: flex;
-    @extend %list;
+    &__list {
+        display: flex;
+    }
 }
 
 .footer-soc__item {
     width: 44px;
     height: 44px;
     margin-right: 10px;
-}
 
-.footer-soc__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .footer-soc__link {
@@ -94,35 +81,36 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     transition: background-color 250ms var(--timing-function);
-    @extend %link;
+
+    &:hover,
+    &:focus {
+        background-color: var(--first-accent-color);
+    }
 }
 
-.footer-soc__link:hover,
-.footer-soc__link:focus {
+.footer-soc__link .footer-soc__link:focus {
     background-color: var(--first-accent-color);
 }
 
 .footer-form {
     margin-left: auto;
-}
 
-.footer-form__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--third-text-color);
-    margin-bottom: 20px;
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--third-text-color);
+        margin-bottom: 20px;
+    }
 }
 
 .form-subscribe {
-    display: flex;
-    align-items: center;
+    @extend %align-list;
 }
 
 .form-subscribe__input {
@@ -139,26 +127,25 @@
     padding: 0px 0px 0px 16px;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-subscribe__input:hover,
-.form-subscribe__input:focus {
-    border-color: var(--first-accent-color);
-}
+    &:hover,
+    &:focus {
+        border-color: var(--first-accent-color);
+    }
 
-.form-subscribe__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .form-subscribe__btn {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--third-text-color);
@@ -170,11 +157,11 @@
     border-radius: 4px;
     padding-left: 29px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-subscribe__btn:hover,
-.form-subscribe__btn:focus {
-    background-color: var(--second-accent-color);
+    &:hover,
+    &:focus {
+        background-color: var(--second-accent-color);
+    }
 }
 
 .form-subscribe__icon {
